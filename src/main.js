@@ -1,7 +1,8 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createMemoryHistory, createWebHistory, createRouter } from 'vue-router'
 import { createApp } from 'vue'
 
-// public/images들을 사용하기 위해서 import함. browser없이 script만으로 실행시키기 위해
+// public/images들을 사용하기 위해서 import함. browser없이 script만으로 실행시키기 위해?
+// 전역에서 사용하려면 main에서 import해야함!
 import './assets/css/icon.css'
 
 import App from './App.vue'
@@ -15,7 +16,7 @@ import AdminIndex from './components/admin/Index.vue'
 
 // router를 만듦! 라우터를 사용하는 주체는 vue app임
 const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(),
     routes:[
         // 1. 객체를 둔다. path & component.
         // {path:"/", component:Layout},
