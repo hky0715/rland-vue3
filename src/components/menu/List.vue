@@ -20,7 +20,8 @@
     // ----------------------- Event handler ------------------------------------------------------
 
     function addCartClickHandler(menu) {
-        console.log(menu);
+        // console.log(menu);
+        basketInfo.price += menu.price;
     }
 
     // ----------------------- life cycle handler -------------------------------------------------
@@ -100,7 +101,8 @@
     <Pager />
 
     <!----------------------- basket-status 영역 ---------------------->
-    <BasketStatus :price="basketInfo" />
+    <!-- <BasketStatus :price="basketInfo.price" /> -->
+    <BasketStatus :list="basketInfo.list" />
     </main>
 </template>
 
